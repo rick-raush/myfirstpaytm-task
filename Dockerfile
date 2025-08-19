@@ -10,5 +10,6 @@ FROM nginx:alpine
 COPY --from=builder /usr/src/app /app
 COPY nginx.conf /etc/nginx/nginx.conf
 WORKDIR /app
-CMD ["sh", "-c", "node app.js & nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "node app.js & sleep 2 && nginx -g 'daemon off;'"]
+
 
