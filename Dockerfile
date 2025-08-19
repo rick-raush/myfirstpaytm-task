@@ -10,8 +10,8 @@ FROM nginx:alpine
 
 
 # Install Node.js and bash
-RUN apk add --no-cache nodejs npm bash \
-    && ln -s /usr/bin/nodejs /usr/bin/node
+RUN apk add --no-cache nodejs npm bash 
+
 
 
 COPY --from=builder /usr/src/app /app
