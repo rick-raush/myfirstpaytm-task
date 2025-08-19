@@ -11,5 +11,8 @@ app.post('/register', (req, res) => {
     res.send(`<h2>Registration Successful</h2><p>Name: ${name}<br>Email: ${email}<br>Phone: ${phone}</p>`);
 });
 
-app.listen(PORT, () => console.log(`App running on http://localhost:${PORT}`));
+// ✅ Bind to 0.0.0.0, not localhost
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`App running on http://0.0.0.0:${PORT}`);
+});
 
