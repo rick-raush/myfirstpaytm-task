@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('dockerhub-creds')
-        DOCKER_IMAGE = "yourdockerhubusername/paytm-registration"
+        DOCKER_IMAGE = "rickraush/paytm-registration"
     }
 
     stages {
