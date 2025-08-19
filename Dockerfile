@@ -7,6 +7,13 @@ COPY . .
 
 # Stage 2 - Nginx with Node app
 FROM nginx:alpine
+
+
+# Install Node.js and bash
+RUN apk add --no-cache nodejs npm bash \
+    && ln -s /usr/bin/nodejs /usr/bin/node
+
+
 COPY --from=builder /usr/src/app /app
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY start.sh /start.sh
