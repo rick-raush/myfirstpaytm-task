@@ -9,7 +9,12 @@ COPY . .
 FROM nginx:alpine
 COPY --from=builder /usr/src/app /app
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 WORKDIR /app
-CMD ["sh", "-c", "node app.js & sleep 2 && nginx -g 'daemon off;'"]
+
+# Use the wait-for script
+CMD ["/start.sh"]
+
 
 
