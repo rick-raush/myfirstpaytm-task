@@ -4,8 +4,9 @@ This project demonstrates a **Node.js application** (Express) with an **Nginx re
 The app is a sample **Paytm-style registration form** where users can register with their name, email, and phone number.
 
 ---
-
+````markdown
 ## 📂 Project Structure
+
 paytm-registration-app/
 ├── Dockerfile
 ├── nginx.conf
@@ -13,3 +14,4 @@ paytm-registration-app/
 ├── package.json
 └── views/
     └── register.html
+````
